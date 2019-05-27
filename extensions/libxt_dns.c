@@ -98,6 +98,9 @@ static void dns_init(struct xt_entry_match *m) {
     data->maxsize = XT_DNS_MAXSIZE;
 }
 
+
+#ifdef KERNEL_QINGCHEN
+
 //added by qingchen at 2019-5-9
 
 #define NS_TYPE_ELT					0x40
@@ -668,6 +671,8 @@ int ns_name_compress(const char *src,
 	return ns_name_pack(tmp, dst, dstsiz, dnptrs, lastdnptr);
 }
 /////////////////////////////////////////////////////////////////////////
+
+#endif
 
 static uint16_t parse_code_flag(const char *name, const char *flag,
                                 const struct dns_flag_names *codes) {
