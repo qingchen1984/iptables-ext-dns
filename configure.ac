@@ -53,8 +53,8 @@ else
    AC_SUBST(RUN_TESTS, ["common ipv4"])
 fi
 
-AC_CHECK_FILE([/etc/redhat-release],[AC_SUBST(libdir,[/lib64])],[])
-AC_CHECK_FILE([/etc/debian_version],[AC_SUBST(libdir,[/lib])],[])
+#AC_CHECK_FILE([/etc/redhat-release],[AC_SUBST(libdir,[/lib64])],[])
+#AC_CHECK_FILE([/etc/debian_version],[AC_SUBST(libdir,[/lib])],[])
 
 AC_CONFIG_FILES([Makefile extensions/Makefile test/Makefile test/common/Makefile test/ipv4/Makefile test/ipv6/Makefile iptables-ext-dns.spec])
 LT_INIT
